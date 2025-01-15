@@ -18,12 +18,16 @@ public class Product {
 
     //   Predicate: boolean test(Object)
     public boolean checkPrice(double price) {
-        if(price > 1000)return true;
+        if (price > 1000) return true;
         else return false;
     }
 
-//   BiPredicate: boolean test(Object,Object)
-
+    //   BiPredicate: boolean test(Object,Object)
+    public boolean checkProduct(int id, String name) {
+        if (id != 0) {
+            return name.isEmpty();
+        } else return false;
+    }
 
 //    Supplier: Object get()
 
