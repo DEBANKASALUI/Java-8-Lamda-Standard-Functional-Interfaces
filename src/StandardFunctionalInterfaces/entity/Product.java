@@ -29,19 +29,28 @@ public class Product {
         } else return false;
     }
 
-//    Supplier: Object get()
+    //    Supplier: Object get()
+    public String returnProductName() {
+        return "Bosch";
+    }
 
+    //    Function: Object apply(Object)
+    public Integer returnProductNameLength(String pname) {
+        return pname.length();
+    }
 
-//    Function: Object apply(Object)
+    //    BiFunction: Object apply(Object,Object)
+    public double returnDiscountedPrice(String productName, double price) {
+        return productName.startsWith("S") ? (price * (15.0 / 100)) : price;
+    }
 
+    //  UnaryOperator: Double apply(Double)
+    public double computePriceAfterFixedDiscount(double price) {
+        return price + (price * (15.0 / 100));
+    }
 
-//    BiFunction: Object apply(Object,Object)
-
-
-//  UnaryOperator: Double apply(Double)
-
-
-//  BinaryOperator: Double apply(Double)
-
-
+    //  BinaryOperator: Double apply(Double)
+    public double computePriceAfterCustomDiscount(double price, double disc) {
+        return price + (price * (disc / 100));
+    }
 }
