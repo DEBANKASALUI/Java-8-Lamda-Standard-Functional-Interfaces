@@ -49,7 +49,7 @@ public class Product {
         return price + (price * (15.0 / 100));
     }
 
-    //  BinaryOperator: Double apply(Double)
+    //  BinaryOperator: Double apply(Double,Double)
     public double computePriceAfterCustomDiscount(double price, double disc) {
         return price + (price * (disc / 100));
     }
